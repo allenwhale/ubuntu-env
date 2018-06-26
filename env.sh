@@ -31,7 +31,9 @@ sudo apt-get install -y $APT_PACKAGE
 #zsh setup
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 zsh -c 'source ~/.zshrc; git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions'
+chmod a-w -R zsh-autosuggestions
 zsh -c 'source ~/.zshrc; git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting'
+chmod a-w -R zsh-syntax-highlighting
 cp $ZSHRC ~/.zshrc
 sudo chsh -s `which zsh` `whoami`
 
